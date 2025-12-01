@@ -4,12 +4,10 @@ RSpec.describe SafeDial do
   let(:dial) { SafeDial.new }
 
   it 'will rotate to smaller number when provided input is L10' do
-    dial.position = 50
     expect(dial.rotate('L10')).to eq(40)
   end
 
   it 'will rotate to larger number when provided input is R10' do
-    dial.position = 50
     expect(dial.rotate('R10')).to eq(60)
   end
 
@@ -45,13 +43,11 @@ RSpec.describe SafeDial do
   end
 
   it 'will count everytime the safe dial crosses 0' do
-    dial.position = 50
     dial.rotate('L151')
     expect(dial.zero_count_pass).to eq(2)
   end
 
   it 'will count each time the safe dial crosses 0 when rotating right' do
-    dial.position = 80
     dial.rotate('R1000')
     expect(dial.zero_count_pass).to eq(10)
   end
