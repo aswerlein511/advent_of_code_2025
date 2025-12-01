@@ -14,9 +14,10 @@ class SafeDial
     zero_hits = 0
     pos = @position
     steps.times do
-      if direction == 'L'
+      case direction
+      when 'L'
         pos = (pos - 1) % 100
-      elsif direction == 'R'
+      when 'R'
         pos = (pos + 1) % 100
       end
       zero_hits += 1 if pos == 0
