@@ -3,10 +3,6 @@ require_relative "../lib/day1"
 RSpec.describe SafeDial do
   let(:dial) { SafeDial.new }
 
-  it "returns the possible numbers" do
-    expect(dial.create_safe_number.size).to eq(100)
-  end
-
   it 'will rotate to smaller number when provided input is L10' do
     dial.position = 50
     expect(dial.rotate('L10')).to eq(40)

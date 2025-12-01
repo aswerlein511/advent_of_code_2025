@@ -7,10 +7,6 @@ class SafeDial
 
   attr_accessor :position, :zero_count_land, :zero_count_pass
 
-  def create_safe_number
-    (0..99).to_a
-  end
-
   def rotate(rotation)
     old_position = @position
     direction = rotation[0]
