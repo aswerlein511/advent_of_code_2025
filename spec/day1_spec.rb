@@ -46,7 +46,7 @@ RSpec.describe SafeDial do
 
   it 'will count everytime the safe dial crosses 0' do
     dial.position = 50
-    dial.rotate('L151') # crosses 0
+    dial.rotate('L151')
     expect(dial.zero_count_pass).to eq(2)
   end
 
