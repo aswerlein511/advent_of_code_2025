@@ -29,11 +29,13 @@ class SafeDial
   end
 end
 
-rotations = File.readlines("./lib/data/day1.txt").map(&:chomp)
-dial = SafeDial.new
-rotations.each do |rotation|
-  dial.rotate(rotation)
-end
+if __FILE__ == $0
+  rotations = File.readlines('lib\data\day1.txt').map(&:chomp)
+  dial = SafeDial.new
+  rotations.each do |rotation|
+    dial.rotate(rotation)
+  end
 
-puts "Zero count (lands on 0): #{dial.zero_count_land}"
-puts "Zero count 2 (passes through 0): #{dial.zero_count_pass}"
+  puts "Zero count (lands on 0): #{dial.zero_count_land}"
+  puts "Zero count 2 (passes through 0): #{dial.zero_count_pass}"
+end
