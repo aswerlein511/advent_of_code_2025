@@ -17,6 +17,7 @@ Create your daily solution files in the `lib/` directory and corresponding tests
 Example structure for Day 1:
 - `lib/day1.rb` - Solution implementation
 - `spec/day1_spec.rb` - Tests for Day 1
+- `lib/data/day1.txt` - Text Input for puzzle 
 
 ## Running Tests
 
