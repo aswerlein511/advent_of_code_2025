@@ -13,7 +13,7 @@ class Ingredients
   def count_fresh_ids(ranges)
     merged_range = []
     ranges.each do |start, last|
-      if merged_range.empty? || merged_range.last[1] < start - 1
+      if merged_range.empty? || merged_range.last[1] < start
         merged_range << [start, last]
       else
         merged_range.last[1] = [merged_range.last[1], last].max
